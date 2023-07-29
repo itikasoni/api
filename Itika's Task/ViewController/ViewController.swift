@@ -43,6 +43,16 @@ class ViewController: UIViewController {
                 self.countryCode.text = userDetails[0].address?.city
             }
             
+            let imageUrl = URL(string: userDetails[0].profileImg ?? "")!
+            DispatchQueue.global().async {
+                if let imageData = try? Data(contentsOf: imageUrl) {
+                    DispatchQueue.main.async {
+                        let image = UIImage(data: imageData)
+                        self.profileImg.image = image
+                    }
+                }
+            }
+            
         } catch {
             print("Error parsing JSON: \(error.localizedDescription)")
         }
