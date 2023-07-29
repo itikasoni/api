@@ -151,6 +151,30 @@ class ViewController: UIViewController {
             //without model
             let userDetails = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
             print(userDetails!);
+           // if you want to print without model
+            
+//            for jsonItem in jsonArray {
+//                            // Process each JSON item here as a dictionary
+//                            if let id = jsonItem["id"] as? Int,
+//                               let title = jsonItem["title"] as? String,
+//                               let price = jsonItem["price"] as? Double,
+//                               let description = jsonItem["description"] as? String,
+//                               let category = jsonItem["category"] as? String,
+//                               let image = jsonItem["image"] as? String,
+//                               let ratingDict = jsonItem["rating"] as? [String: Any],
+//                               let rate = ratingDict["rate"] as? Double,
+//                               let count = ratingDict["count"] as? Int {
+//                                // Do whatever you need with the extracted data
+//                                print("ID: \(id)")
+//                                print("Title: \(title)")
+//                                print("Price: \(price)")
+//                                print("Description: \(description)")
+//                                print("Category: \(category)")
+//                                print("Image URL: \(image)")
+//                                print("Rating Rate: \(rate)")
+//                                print("Rating Count: \(count)")
+//                            }
+//                        }
             
             //with model
           //  let userDetails = try JSONDecoder().decode(UserDetailsModel.self, from: data)
